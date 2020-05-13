@@ -3,6 +3,7 @@ version: '3.7'
 services:
   web:
     build: ./services/web
+    dockerfile: Dockerfile.prod
     command: gunicorn --bind 0.0.0.0:5000 manage:app
     ports:
       - 5000:5000
