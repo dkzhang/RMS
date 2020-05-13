@@ -17,8 +17,8 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=rmsdb
-      - POSTGRES_PASSWORD=rmspd
+      - POSTGRES_USER=rmsu
+      - POSTGRES_PASSWORD=rmsp
       - POSTGRES_DB=rms_db
 
 volumes:
