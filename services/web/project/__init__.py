@@ -49,13 +49,13 @@ def upload_file():
         file = request.files["file"]
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config["MEDIA_FOLDER"], filename))
-    return (f"\n"
-            f"    <!doctype html>\n"
-            f"    <title>upload new File</title>\n"
-            f"    <form action=\"\" method=post enctype=multipart/form-data>\n"
-            f"      <p><input type=file name=file><input type=submit value=Upload>\n"
-            f"    </form>\n"
-            f"    ")
+    return """
+    <!doctype html>
+    <title>upload new File</title>
+    <form action="" method=post enctype=multipart/form-data>
+      <p><input type=file name=file><input type=submit value=Upload>
+    </form>
+    """
 
 # @app.route('/hello')
 # def hello():
